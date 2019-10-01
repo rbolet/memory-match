@@ -3,40 +3,40 @@ body{
 }
 header{
   background-color: lime;
-  height: 100px;
+  height: 60px;
 }
 
 .main{
   background-color: yellow;
-  height: 800px;
+  height: 540px;
   position: relative;
 }
 
 .sidenav, .gamearea{
   border: 1px solid black;
   display: inline-block;
-  height: 750px;
+  height: 480px;
   margin: 0;
   position: absolute;
   top: 25px;
 }
 .sidenav{
   background-color: orange;
-  width: 250px;
+  width: 150px;
   left: 10px;
 }
 
 .gamearea{
   background-color: cyan;
-  width: 1300px;
-  left: 275px;
+  width: 1050px;
+  left: 175px;
 }
 
 .row{
   background-color: green;
   position: relative;
   border: 1px black solid;
-  height: 185px;
+  height: 145px;
   margin: 5px;
 }
 
@@ -45,9 +45,9 @@ header{
   display: inline-block;
   position: relative;
   border: 1px black solid;
-  height: 175px;
-  width: 125px;
+  height: 135px;
+  width: 95px;
   margin: 5px;
-  left: 180px;
+  left: 140px;
 
 }
