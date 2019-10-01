@@ -54,8 +54,9 @@ header{
   margin: 5px;
 }
 
+
 .card{
-  /* background-color: red; */
+  background-color: transparent;
   display: inline-block;
   position: relative;
   border: 1px black solid;
@@ -63,5 +64,31 @@ header{
   width: 95px;
   margin: 5px;
   left: 140px;
+  perspective: 1000px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
 
+.cardback, .cardfront{
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.cardback{
+   background-image: url("../images/lfz-card.jpg");
+   /* transform: rotateY(180deg); */
+}
+
+.cardfront{
+  background-image: url("../images/html-logo.png");
+  transform: rotateY(180deg);
+}
+
+.flipping{
+  transform: rotateY(180deg);
 }
