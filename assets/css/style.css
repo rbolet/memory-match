@@ -1,1 +1,53 @@
+body{
+  margin: 0;
+}
+header{
+  background-color: lime;
+  height: 100px;
+}
 
+.main{
+  background-color: yellow;
+  height: 800px;
+  position: relative;
+}
+
+.sidenav, .gamearea{
+  border: 1px solid black;
+  display: inline-block;
+  height: 750px;
+  margin: 0;
+  position: absolute;
+  top: 25px;
+}
+.sidenav{
+  background-color: orange;
+  width: 250px;
+  left: 10px;
+}
+
+.gamearea{
+  background-color: cyan;
+  width: 1300px;
+  left: 275px;
+}
+
+.row{
+  background-color: green;
+  position: relative;
+  border: 1px black solid;
+  height: 185px;
+  margin: 5px;
+}
+
+.card{
+  background-color: red;
+  display: inline-block;
+  position: relative;
+  border: 1px black solid;
+  height: 175px;
+  width: 125px;
+  margin: 5px;
+  left: 180px;
+
+}
