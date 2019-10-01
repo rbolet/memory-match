@@ -2,12 +2,13 @@ body{
   margin: 0;
 }
 header{
-  background-color: lime;
+  /* background-color: lime; */
+  border: 1px solid black;
   height: 60px;
 }
 
 .main{
-  background-color: yellow;
+  /* background-color: yellow; */
   height: 540px;
   position: relative;
 }
@@ -21,19 +22,32 @@ header{
   top: 25px;
 }
 .sidenav{
-  background-color: orange;
+  /* background-color: orange; */
   width: 150px;
   left: 10px;
 }
 
+.navhead{
+  text-align: center;
+}
+
+.stats{
+  /* background-color: black; */
+  border: 1px solid black;
+  width: 140;
+  height: 65px;
+  margin: 5px;
+}
+
 .gamearea{
-  background-color: cyan;
+  /* background-color: cyan; */
+  border: 1px solid black;
   width: 1050px;
   left: 175px;
 }
 
 .row{
-  background-color: green;
+  /* background-color: green; */
   position: relative;
   border: 1px black solid;
   height: 145px;
@@ -41,7 +55,7 @@ header{
 }
 
 .card{
-  background-color: red;
+  /* background-color: red; */
   display: inline-block;
   position: relative;
   border: 1px black solid;
