@@ -8,14 +8,18 @@ function initializeApp(){
 }
 
 function cardClicked(event){
-  console.log(this, event);
+  console.log("This", this,"event", event);
   var targetCard = $(event.currentTarget);
   targetCard.toggleClass("flipping");
-console.log(targetCard)
+
+  console.log("targetCard", targetCard)
+var cardFront = targetCard.children().first().attr("class");
+console.log("cardFront", cardFront)
   if(firstCardClicked === null){
     firstCardClicked = targetCard;
   }else{
     secondCardClicked = targetCard;
+    console.log("first card", firstCardClicked, "second card", secondCardClicked)
     checkforMatch(firstCardClicked, secondCardClicked);
   }
 
@@ -23,5 +27,7 @@ console.log(targetCard)
 
 function checkforMatch(cardA, cardB){
 
-  console.log("Checking for match", cardA.attr("class"), cardB.attr("class"));
+  var cardAClass = cardA.children().first().attr("class");
+  var cardBClass = cardB.children().first().attr("class");
+  console.log(cardAClass, cardBClass)
 }
