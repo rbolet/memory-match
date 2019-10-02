@@ -70,29 +70,25 @@ header{
   transform-style: preserve-3d;
 }
 
-.cardback, .html-logo {
+.cardback, .html-logo{
   position: absolute;
   background-size: cover;
   background-position: center;
   height: 100%;
   width: 100%;
   backface-visibility: hidden;
-  transform: rotateY(180deg);
 }
 
 .cardback{
-
-  background-image: url("../images/lfz-card.jpg");
+   background-image: url("../images/lfz-card.jpg");
    /* transform: rotateY(180deg); */
 }
 
-/* .cardfront{
-  transform: rotateY(180deg); */
-/* } */
-
 .html-logo{
-    background-image: url("../images/html-logo.png");
+  background-image: url("../images/html-logo.png");
+  transform: rotateY(180deg);
 }
+
 .flipping{
   transform: rotateY(180deg);
 }
