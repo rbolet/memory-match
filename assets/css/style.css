@@ -55,7 +55,7 @@ header{
 }
 
 
-.card{
+.card , .matched {
   background-color: transparent;
   display: inline-block;
   position: relative;
@@ -89,6 +89,6 @@ header{
   transform: rotateY(180deg);
 }
 
-.flipping{
+.flipped{
   transform: rotateY(180deg);
 }
