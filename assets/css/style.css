@@ -70,7 +70,7 @@ header{
   transform-style: preserve-3d;
 }
 
-.cardback, .html-logo{
+.cardback, .html-logo, .css-logo{
   position: absolute;
   background-size: cover;
   background-position: center;
@@ -86,6 +86,11 @@ header{
 
 .html-logo{
   background-image: url("../images/html-logo.png");
+  transform: rotateY(180deg);
+}
+
+.css-logo{
+  background-image: url("../images/css-logo.png");
   transform: rotateY(180deg);
 }
 
