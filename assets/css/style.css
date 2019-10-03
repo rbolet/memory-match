@@ -70,29 +70,64 @@ header{
   transform-style: preserve-3d;
 }
 
-.cardback, .html-logo, .css-logo{
+.cardback,
+.html-logo, .css-logo, .docker-logo,
+.git-logo, .js-logo, .mysql-logo,
+.node-logo, .php-logo, .react-logo
+{
   position: absolute;
   background-size: cover;
   background-position: center;
   height: 100%;
   width: 100%;
   backface-visibility: hidden;
+  transform: rotateY(180deg);
 }
 
 .cardback{
    background-image: url("../images/lfz-card.jpg");
-   /* transform: rotateY(180deg); */
+   transform: none;
 }
 
 .html-logo{
   background-image: url("../images/html-logo.png");
-  transform: rotateY(180deg);
+
 }
 
 .css-logo{
   background-image: url("../images/css-logo.png");
-  transform: rotateY(180deg);
+
 }
+
+.docker-logo{
+  background-image: url("../images/docker-logo.jpg");
+}
+
+.git-logo{
+  background-image: url("../images/gitHub-logo.png");
+
+}
+
+.js-logo{
+  background-image: url("../images/js-logo.png");
+}
+
+.mysql-logo{
+  background-image: url("../images/mysql-logo.jpg");
+}
+
+.node-logo{
+  background-image: url("../images/node-logo.png");
+}
+
+.php-logo{
+  background-image: url("../images/php-logo.jpeg");
+}
+
+.react-logo{
+  background-image: url("../images/react-logo.png");
+}
+
 
 .flipped{
   transform: rotateY(180deg);

@@ -1,8 +1,9 @@
 $(document).ready(initializeApp);
 
 var firstCardClicked = null, secondCardClicked = null;
-var matches = 0;
-var maxMatches = 2;
+var matches, maxMatches;
+
+resetGame();
 
 function initializeApp(){
   clickOn();
@@ -78,10 +79,10 @@ function resetCards(){
   $(".gamearea").on("click", ".card", cardClicked);
 }
 
-function resetGame(){
+function resetGame() {
   $(".endmodal").addClass("hidden");
   matches = 0;
-  maxMatches = 2;
+  maxMatches = 9;
 
   var matchedCards = {}
   matchedCards = $(".matched")
