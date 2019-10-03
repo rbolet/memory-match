@@ -8,8 +8,10 @@ header{
 }
 
 .main{
-  /* background-color: yellow; */
-  height: 540px;
+  background-image: url("../images/lfz-background.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   position: relative;
 }
 
@@ -19,7 +21,7 @@ header{
   height: 480px;
   margin: 0;
   position: absolute;
-  top: 25px;
+  top: 85px;
 }
 .sidenav{
   /* background-color: orange; */

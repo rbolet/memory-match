@@ -2,13 +2,17 @@ $(document).ready(initializeApp);
 
 var firstCardClicked = null, secondCardClicked = null;
 var matches, maxMatches;
+var attempts =0;
+var gamesPlayed = 0;
 
 resetGame();
 
 function initializeApp(){
+  gamesPlayed = 1;
   clickOn();
   $(".newgame").on("click", resetGame);
   $(".endmodal").addClass("hidden");
+  updateStats();
 }
 
 function clickOn() {
@@ -34,7 +38,9 @@ function cardClicked(event) {
         clickOn();
         return;
       } else {                                 //store second card, run check for match
-          secondCardClicked = targetCard;
+
+        secondCardClicked = targetCard;
+        attempts++;
           setTimeout(checkforMatch,800,firstCardClicked, secondCardClicked);
         }
     }
@@ -51,11 +57,14 @@ function checkforMatch(cardA, cardB){
 
       cardA.addClass("matched").removeClass("card"); //make matched cards static
       cardB.addClass("matched").removeClass("card");
-      matches++;                            //record the match
+      matches++;
+      //updateStats();                            //record the match
       checkforWin();                        // and check for a win
     } else{
     setTimeout(resetCards, 1000, cardB, cardA);
-      }
+    }
+  updateStats();
+
 }
 
 function checkforWin(){
@@ -79,14 +88,29 @@ function resetCards(){
   $(".gamearea").on("click", ".card", cardClicked);
 }
 
+function updateStats(){
+  $("#games-played").text(gamesPlayed);
+  $("#attempts").text(attempts);
+  $("#accuracy").text(caclulateAccuracy);
+}
+
+function caclulateAccuracy(){
+  if (attempts === 0){
+    return "--";
+  } else {
+    return Math.round((matches/attempts)*100) + "%";
+  }
+}
+
 function resetGame() {
   $(".endmodal").addClass("hidden");
   matches = 0;
   maxMatches = 9;
 
-  var matchedCards = {}
-  matchedCards = $(".matched")
+
+  var matchedCards = $(".matched");
   matchedCards.removeClass("matched").addClass("card")
 
   resetCards(matchedCards);
+  gamesPlayed++; updateStats();
 }
