@@ -97,3 +97,33 @@ header{
 .flipped{
   transform: rotateY(180deg);
 }
+
+.hidden{
+  visibility:hidden;
+}
+
+.endmodal{
+  position: absolute;
+  display: inline-block;
+  background-color:black;
+  height: 100%;
+  width: 33%;
+  left: 300px;
+  border-radius: 50px;
+}
+
+.newgame{
+  position: relative;
+  display: inline-block;
+  background-color:gray;
+  border: 2px solid teal;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  height: 50%;
+  width: 33%;
+  top: 25%;
+  left: 10%;
+
+
+}

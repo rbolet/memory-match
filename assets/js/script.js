@@ -5,7 +5,9 @@ var matches = 0;
 var maxMatches = 2;
 
 function initializeApp(){
-  clickOn()
+  clickOn();
+  $(".newgame").on("click", resetGame);
+  $(".endmodal").addClass("hidden");
 }
 
 function clickOn() {
@@ -57,7 +59,7 @@ function checkforMatch(cardA, cardB){
 
 function checkforWin(){
   if (matches === maxMatches){
-    alert("You win!");
+    $(".endmodal").removeClass("hidden");
     return true;
 
   } else {
@@ -68,10 +70,22 @@ function checkforWin(){
 }
 
 function resetCards(){
-  console.log("running Reset Cards");
+
   for(var iCard in arguments){
     arguments[iCard].removeClass("flipped");
   }
   firstCardClicked = null; secondCardClicked = null;
   $(".gamearea").on("click", ".card", cardClicked);
+}
+
+function resetGame(){
+  $(".endmodal").addClass("hidden");
+  matches = 0;
+  maxMatches = 2;
+
+  var matchedCards = {}
+  matchedCards = $(".matched")
+  matchedCards.removeClass("matched").addClass("card")
+
+  resetCards(matchedCards);
 }
