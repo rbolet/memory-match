@@ -70,6 +70,7 @@ function checkforMatch(cardA, cardB){
 function checkforWin(){
   if (matches === maxMatches){
     $(".endmodal").removeClass("hidden");
+    // $(".main").on("click", Function {$(".endmodal").addClass("hidden");})
     return true;
 
   } else {

@@ -1,10 +1,19 @@
 body{
   margin: 0;
 }
+
+header, .sidenav {
+  background-color: white;
+  opacity: .6;
+}
+
 header{
-  /* background-color: lime; */
   border: 1px solid black;
-  height: 60px;
+  font-size: 9vh;
+  text-align: center;
+  padding: 5px;
+  height: 12vh;
+  border-radius: 50px;
 }
 
 .main{
@@ -13,20 +22,43 @@ header{
   background-position: center;
   height: 100vh;
   position: relative;
+  margin: 0;
 }
 
 .sidenav, .gamearea{
-  border: 1px solid black;
-  display: inline-block;
-  height: 480px;
-  margin: 0;
+
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 84vh;
   position: absolute;
-  top: 85px;
+  /* top: 16%; */
+  margin: 10px;
 }
+
+.gamearea{
+  display: inline-block;
+  width : 83%;
+  left: 15%;
+}
+
 .sidenav{
   /* background-color: orange; */
-  width: 150px;
-  left: 10px;
+  border: 1px solid black;
+  width: 10%;
+  border-radius: 50px;
+  left: 1%
+
+
+}
+
+.buttons{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 .navhead{
@@ -36,23 +68,21 @@ header{
 .stats{
   /* background-color: black; */
   border: 1px solid black;
-  width: 140;
-  height: 65px;
+  width: 90%;
+  height: 10%;
   margin: 5px;
-}
-
-.gamearea{
-  /* background-color: cyan; */
-  border: 1px solid black;
-  width: 1050px;
-  left: 175px;
+  border-radius: 50px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .row{
   /* background-color: green; */
   position: relative;
-  border: 1px black solid;
-  height: 145px;
+  display: flex;
+  justify-content: center;
+  /* border: 1px black solid; */
+  height: 30%;
   margin: 5px;
 }
 
@@ -61,11 +91,9 @@ header{
   background-color: transparent;
   display: inline-block;
   position: relative;
-  border: 1px black solid;
-  height: 135px;
-  width: 95px;
-  margin: 5px;
-  left: 140px;
+  height: 90%;
+  width: 9%;
+  margin: 15px;
   perspective: 1000px;
   text-align: center;
   transition: transform 0.8s;
