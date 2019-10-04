@@ -3,8 +3,7 @@ body{
 }
 
 header, .sidenav {
-  background-color: white;
-  opacity: .6;
+  background-color: rgba(255, 255, 255, .6);
 }
 
 header{
@@ -32,7 +31,6 @@ header{
   justify-content: center;
   height: 84vh;
   position: absolute;
-  /* top: 16%; */
   margin: 10px;
 }
 
@@ -66,14 +64,23 @@ header{
 }
 
 .stats{
-  /* background-color: black; */
   border: 1px solid black;
   width: 90%;
   height: 10%;
   margin: 5px;
   border-radius: 50px;
   text-align: center;
-  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#newgame {
+  background-color:black;
+  color: aqua;
+   display: flex;
+   justify-content: center;
+  align-items: center;
 }
 
 .row{
@@ -167,28 +174,16 @@ header{
   visibility:hidden;
 }
 
-.endmodal{
-  position: absolute;
-  display: inline-block;
+.endmodal {
   background-color:black;
+  color: aqua;
+   display: flex;
+   justify-content: center;
+  align-items: center;
+  position: absolute;
   height: 100%;
   width: 33%;
-  left: 300px;
   border-radius: 50px;
-}
-
-.newgame{
-  position: relative;
-  display: inline-block;
-  background-color:gray;
-  border: 2px solid teal;
-  color: white;
-  text-align: center;
-  vertical-align: middle;
-  height: 50%;
-  width: 33%;
-  top: 25%;
-  left: 10%;
-
-
+  font-size: 8vh;
+  margin: auto;
 }

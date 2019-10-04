@@ -10,8 +10,10 @@ resetGame();
 function initializeApp(){
   gamesPlayed = 1;
   clickOn();
-  $(".newgame").on("click", resetGame);
+  $("#newgame").on("click", resetGame);
   $(".endmodal").addClass("hidden");
+  $("#newgame").addClass("hidden");
+
   updateStats();
 }
 
@@ -70,7 +72,8 @@ function checkforMatch(cardA, cardB){
 function checkforWin(){
   if (matches === maxMatches){
     $(".endmodal").removeClass("hidden");
-    // $(".main").on("click", Function {$(".endmodal").addClass("hidden");})
+    $("#newgame").removeClass("hidden");
+    $(".main").on("click", function (){$(".endmodal").addClass("hidden");})
     return true;
 
   } else {
@@ -105,6 +108,7 @@ function caclulateAccuracy(){
 
 function resetGame() {
   $(".endmodal").addClass("hidden");
+  $("#newgame").addClass("hidden");
   matches = 0;
   maxMatches = 9;
 
@@ -113,5 +117,6 @@ function resetGame() {
   matchedCards.removeClass("matched").addClass("card")
 
   resetCards(matchedCards);
-  gamesPlayed++; updateStats();
+  gamesPlayed++;
+  updateStats();
 }
