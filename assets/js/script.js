@@ -120,3 +120,35 @@ function resetGame() {
   gamesPlayed++;
   updateStats();
 }
+
+function createFrontArray(){
+  var cardArray = ["html-logo", "css-logo", "docker-logo",
+    "git-logo", "js-logo", "mysql-logo", "node-logo",
+    "php-logo", "react-logo"]
+
+  var cardDoubleArray = []; // double the amount of cards as fronts
+  cardDoubleArray = cardArray.concat(cardArray);
+  return cardDoubleArray;
+}
+
+function createCards(newCardArray){
+  var cardsPerRow = Math.round(newCardArray.length /3);
+
+
+  for(var iRows = 1; iRows < 4; ++iRows){
+      var queryString = ".row:nth-child("+iRows+")";
+      var targetRow = $(queryString);
+
+    for(var iCards = 0; iCards < cardsPerRow && newCardArray.length > 0; ++iCards){
+      //generate card
+      var newCard = $("<div>").addClass("card");
+        var newFrontClass = newCardArray.splice(Math.floor(Math.random()*newCardArray.length-1), 1)
+        var newFront = $("<div>").addClass(newFrontClass);
+        var newBack = $("<div>").addClass("cardback");
+
+      newCard.append(newFront);
+      newCard.append(newBack);
+      targetRow.prepend(newCard);
+    }
+  }
+}

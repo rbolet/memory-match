@@ -177,8 +177,8 @@ header{
 .endmodal {
   background-color:black;
   color: aqua;
-   display: flex;
-   justify-content: center;
+  display: flex;
+  justify-content: center;
   align-items: center;
   position: absolute;
   height: 100%;
