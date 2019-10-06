@@ -148,10 +148,11 @@ function createNewCards(newCardArray){
         var newFrontClass = newCardArray.splice(Math.floor(Math.random()*newCardArray.length-1), 1)
         var newFront = $("<div>").addClass("cardfront").addClass(newFrontClass);
         var newBack = $("<div>").addClass("cardback");
-
+      setTimeout(function(){
       newCard.append(newFront);
       newCard.append(newBack);
-      targetRow.prepend(newCard);
+      targetRow.prepend(newCard);}, 500)
+      setTimeout(function(){newCard.css("left", "10%")}, 200);
     }
   }
 }
