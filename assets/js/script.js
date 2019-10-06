@@ -2,19 +2,20 @@ $(document).ready(initializeApp);
 
 var firstCardClicked = null, secondCardClicked = null;
 var matches, maxMatches;
-var attempts =0;
+var attempts = 0;
 var gamesPlayed = 0;
 
-resetGame();
+
 
 function initializeApp(){
-  gamesPlayed = 1;
   clickOn();
-  $("#newgame").on("click", resetGame);
-  $(".endmodal").addClass("hidden");
-  $("#newgame").addClass("hidden");
+  $("#newgame").on("click", resetGame); // New Game button resets Game
+  $(".endmodal").addClass("hidden");    // Hide the end modal and the
+  $("#newgame").addClass("hidden");     //  New Game button
 
-  updateStats();
+  resetGame();
+
+  gamesPlayed = 1; updateStats();
 }
 
 function clickOn() {
@@ -118,6 +119,7 @@ function resetGame() {
 
   resetCards(matchedCards);
   gamesPlayed++;
+  createNewCards(createFrontArray());
   updateStats();
 }
 
@@ -131,11 +133,12 @@ function createFrontArray(){
   return cardDoubleArray;
 }
 
-function createCards(newCardArray){
+function createNewCards(newCardArray){
+
+  $(".row").empty(".card, .cardfront, .cardback");    // remove existing cards
   var cardsPerRow = Math.round(newCardArray.length /3);
 
-
-  for(var iRows = 1; iRows < 4; ++iRows){
+  for(var iRows = 1; iRows < 4; ++iRows){             // select a target row
       var queryString = ".row:nth-child("+iRows+")";
       var targetRow = $(queryString);
 
@@ -143,7 +146,7 @@ function createCards(newCardArray){
       //generate card
       var newCard = $("<div>").addClass("card");
         var newFrontClass = newCardArray.splice(Math.floor(Math.random()*newCardArray.length-1), 1)
-        var newFront = $("<div>").addClass(newFrontClass);
+        var newFront = $("<div>").addClass("cardfront").addClass(newFrontClass);
         var newBack = $("<div>").addClass("cardback");
 
       newCard.append(newFront);
@@ -151,4 +154,9 @@ function createCards(newCardArray){
       targetRow.prepend(newCard);
     }
   }
+}
+
+function testMatchAll(){
+  $(".card").addClass("flipped").addClass("matched").removeClass("card");
+
 }
