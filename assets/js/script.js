@@ -144,17 +144,30 @@ function createNewCards(newCardArray){
 
     for(var iCards = 0; iCards < cardsPerRow && newCardArray.length > 0; ++iCards){
       //generate card
-      var newCard = $("<div>").addClass("card");
+      var newCard = $("<div>").addClass("card")
+        .css("left", ($(".row").width() - window.innerWidth *.09)); // set left to right edge of row
         var newFrontClass = newCardArray.splice(Math.floor(Math.random()*newCardArray.length-1), 1)
         var newFront = $("<div>").addClass("cardfront").addClass(newFrontClass);
         var newBack = $("<div>").addClass("cardback");
-      setTimeout(function(){
+
       newCard.append(newFront);
       newCard.append(newBack);
-      targetRow.prepend(newCard);}, 500)
-      setTimeout(function(){newCard.css("left", "10%")}, 200);
+      targetRow.prepend(newCard);
+
+      var dynamicCardPosition =
+        ($(".row").width() * .06)               // left 6%
+          + ($(".card").width() * (iCards) + 1)
+          + (15 * iCards + 1);  // + width of cards
+
+      setTimeout(
+        function(dynamicCardPosition, newCard){
+          newCard.css("left", dynamicCardPosition);
+        }, 200);
     }
   }
+}
+
+function animateCards(){
 }
 
 function testMatchAll(){

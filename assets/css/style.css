@@ -97,14 +97,14 @@ header{
 .card , .matched {
   background-color: transparent;
   display: inline-block;
-  position: relative;
-  left: 90%;
+  position: absolute;
+
   height: 90%;
   width: 9%;
   margin: 15px;
   perspective: 1000px;
   text-align: center;
-  transition: transform 0.8s, left 1s;
+  transition: transform 0.8s, left .2s;
   transform-style: preserve-3d;
 }
 
