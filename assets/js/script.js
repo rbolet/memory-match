@@ -159,15 +159,13 @@ function createNewCards(newCardArray){
           + ($(".card").width() * (iCards) + 1)
           + (15 * iCards + 1);  // + width of cards
 
-      setTimeout(
-        function(dynamicCardPosition, newCard){
-          newCard.css("left", dynamicCardPosition);
-        }, 200);
+      setTimeout(animateCards, 200, newCard, dynamicCardPosition);
     }
   }
 }
 
-function animateCards(){
+function animateCards(card, position){
+  card.css("left", position);
 }
 
 function testMatchAll(){
