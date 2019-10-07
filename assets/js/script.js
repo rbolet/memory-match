@@ -159,7 +159,9 @@ function createNewCards(newCardArray){
           + ($(".card").width() * (iCards) + 1)
           + (15 * iCards + 1);  // + width of cards
 
-      setTimeout(animateCards, 200, newCard, dynamicCardPosition);
+      var dynamicDelay = 200 * iCards + 1;
+
+      setTimeout(animateCards, dynamicDelay, newCard, dynamicCardPosition);
     }
   }
 }
@@ -171,4 +173,6 @@ function animateCards(card, position){
 function testMatchAll(){
   $(".card").addClass("flipped").addClass("matched").removeClass("card");
 
+  matches = maxMatches;
+  checkforWin();
 }

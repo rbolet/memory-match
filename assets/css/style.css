@@ -104,7 +104,8 @@ header{
   margin: 15px;
   perspective: 1000px;
   text-align: center;
-  transition: transform 0.8s, left .2s;
+  transition: all .5s;
+
   transform-style: preserve-3d;
 }
 
@@ -182,7 +183,10 @@ header{
   justify-content: center;
   align-items: center;
   position: absolute;
-  height: 100%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  height: 33%;
   width: 33%;
   border-radius: 50px;
   font-size: 8vh;
