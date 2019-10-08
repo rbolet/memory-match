@@ -1,1 +1,194 @@
+body{
+  margin: 0;
+}
 
+header, .sidenav {
+  background-color: rgba(255, 255, 255, .6);
+}
+
+header{
+  border: 1px solid black;
+  font-size: 9vh;
+  text-align: center;
+  padding: 5px;
+  height: 12vh;
+  border-radius: 50px;
+}
+
+.main{
+  background-image: url("../images/lfz-background.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  margin: 0;
+}
+
+.sidenav, .gamearea{
+
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 84vh;
+  position: absolute;
+  margin: 10px;
+}
+
+.gamearea{
+  display: inline-block;
+  width : 83%;
+  left: 15%;
+}
+
+.sidenav{
+  /* background-color: orange; */
+  border: 1px solid black;
+  width: 10%;
+  border-radius: 50px;
+  left: 1%
+
+
+}
+
+.buttons{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.navhead{
+  text-align: center;
+}
+
+.stats{
+  border: 1px solid black;
+  width: 90%;
+  height: 10%;
+  margin: 5px;
+  border-radius: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#newgame {
+  background-color:black;
+  color: aqua;
+   display: flex;
+   justify-content: center;
+  align-items: center;
+}
+
+.row{
+  /* background-color: green; */
+  position: relative;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* border: 1px black solid; */
+  height: 30%;
+  margin: 5px;
+}
+
+
+.card , .matched {
+  background-color: transparent;
+  display: inline-block;
+  position: absolute;
+
+  height: 90%;
+  width: 9%;
+  margin: 15px;
+  perspective: 1000px;
+  text-align: center;
+  transition: all .5s;
+
+  transform-style: preserve-3d;
+}
+
+.cardback,
+.html-logo, .css-logo, .docker-logo,
+.git-logo, .js-logo, .mysql-logo,
+.node-logo, .php-logo, .react-logo
+{
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.cardback{
+   background-image: url("../images/lfz-card.jpg");
+   transform: none;
+}
+
+.html-logo{
+  background-image: url("../images/html-logo.png");
+
+}
+
+.css-logo{
+  background-image: url("../images/css-logo.png");
+
+}
+
+.docker-logo{
+  background-image: url("../images/docker-logo.jpg");
+}
+
+.git-logo{
+  background-image: url("../images/gitHub-logo.png");
+
+}
+
+.js-logo{
+  background-image: url("../images/js-logo.png");
+}
+
+.mysql-logo{
+  background-image: url("../images/mysql-logo.jpg");
+}
+
+.node-logo{
+  background-image: url("../images/node-logo.png");
+}
+
+.php-logo{
+  background-image: url("../images/php-logo.jpeg");
+}
+
+.react-logo{
+  background-image: url("../images/react-logo.png");
+}
+
+
+.flipped{
+  transform: rotateY(180deg);
+}
+
+.hidden{
+  visibility:hidden;
+}
+
+.endmodal {
+  background-color:black;
+  color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  height: 33%;
+  width: 33%;
+  border-radius: 50px;
+  font-size: 8vh;
+  margin: auto;
+}
