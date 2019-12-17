@@ -86,8 +86,8 @@ header{
 .row{
   /* background-color: green; */
   position: relative;
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
   /* border: 1px black solid; */
   height: 30%;
   margin: 5px;
@@ -97,13 +97,15 @@ header{
 .card , .matched {
   background-color: transparent;
   display: inline-block;
-  position: relative;
+  position: absolute;
+
   height: 90%;
   width: 9%;
   margin: 15px;
   perspective: 1000px;
   text-align: center;
-  transition: transform 0.8s;
+  transition: all .5s;
+
   transform-style: preserve-3d;
 }
 
@@ -181,7 +183,10 @@ header{
   justify-content: center;
   align-items: center;
   position: absolute;
-  height: 100%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  height: 33%;
   width: 33%;
   border-radius: 50px;
   font-size: 8vh;

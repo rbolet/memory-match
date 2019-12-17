@@ -143,7 +143,9 @@ function createNewCards(newCardArray){
 
     for(var iCards = 0; iCards < cardsPerRow && newCardArray.length > 0; ++iCards){
 
-      var newCard = $("<div>").addClass("card");
+      var newCard = $("<div>").addClass("card")
+        .css("left", ($(".row").width() - window.innerWidth *.09));
+
         var newFrontClass = newCardArray.splice(Math.floor(Math.random()*newCardArray.length-1), 1)
         var newFront = $("<div>").addClass("cardfront").addClass(newFrontClass);
         var newBack = $("<div>").addClass("cardback");
@@ -151,6 +153,19 @@ function createNewCards(newCardArray){
       newCard.append(newFront);
       newCard.append(newBack);
       targetRow.prepend(newCard);
+
+      var dynamicCardPosition =
+        ($(".row").width() * .06)               
+          + ($(".card").width() * (iCards) + 1)
+          + (15 * iCards + 1);  // + width of cards
+
+      var dynamicDelay = 200 * iCards + 1;
+
+      setTimeout(animateCards, dynamicDelay, newCard, dynamicCardPosition);
     }
   }
+}
+
+function animateCards(card, position){
+  card.css("left", position);
 }
