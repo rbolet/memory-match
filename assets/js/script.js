@@ -9,9 +9,9 @@ var gamesPlayed = 0;
 
 function initializeApp(){
   clickOn();
-  $("#newgame").on("click", resetGame); // New Game button resets Game
-  $(".endmodal").addClass("hidden");    // Hide the end modal and the
-  $("#newgame").addClass("hidden");     //  New Game button
+  $("#newgame").on("click", resetGame);
+  $(".endmodal").addClass("hidden");
+  $("#newgame").addClass("hidden");
 
   resetGame();
 
@@ -30,17 +30,17 @@ function cardClicked(event) {
   clickOff();
   var targetCard = $(event.currentTarget);
 
-  if (targetCard.is(firstCardClicked)) {    // if the same card is clicked twice, do nothing
+  if (targetCard.is(firstCardClicked)) {
     clickOn();
     return;
   } else{
-      targetCard.addClass("flipped");          // flip the card
+      targetCard.addClass("flipped");
 
-      if(firstCardClicked === null){           // if this is the first card, store it
+      if(firstCardClicked === null){
         firstCardClicked = targetCard;
         clickOn();
         return;
-      } else {                                 //store second card, run check for match
+      } else {
 
         secondCardClicked = targetCard;
         attempts++;
@@ -54,15 +54,14 @@ function checkforMatch(cardA, cardB){
 
   var cardAClass = cardA.children().first().attr("class");
   var cardBClass = cardB.children().first().attr("class");
-  firstCardClicked = null; secondCardClicked = null;  //reset the first and second card vars
+  firstCardClicked = null; secondCardClicked = null;
 
-    if(cardAClass === cardBClass){          //compare the class of the two cards
+    if(cardAClass === cardBClass){
 
-      cardA.addClass("matched").removeClass("card"); //make matched cards static
+      cardA.addClass("matched").removeClass("card");
       cardB.addClass("matched").removeClass("card");
       matches++;
-      //updateStats();                            //record the match
-      checkforWin();                        // and check for a win
+      checkforWin();
     } else{
     setTimeout(resetCards, 1000, cardB, cardA);
     }
@@ -128,22 +127,22 @@ function createFrontArray(){
     "git-logo", "js-logo", "mysql-logo", "node-logo",
     "php-logo", "react-logo"]
 
-  var cardDoubleArray = []; // double the amount of cards as fronts
+  var cardDoubleArray = [];
   cardDoubleArray = cardArray.concat(cardArray);
   return cardDoubleArray;
 }
 
 function createNewCards(newCardArray){
 
-  $(".row").empty(".card, .cardfront, .cardback");    // remove existing cards
+  $(".row").empty(".card, .cardfront, .cardback");
   var cardsPerRow = Math.round(newCardArray.length /3);
 
-  for(var iRows = 1; iRows < 4; ++iRows){             // select a target row
+  for(var iRows = 1; iRows < 4; ++iRows){
       var queryString = ".row:nth-child("+iRows+")";
       var targetRow = $(queryString);
 
     for(var iCards = 0; iCards < cardsPerRow && newCardArray.length > 0; ++iCards){
-      //generate card
+
       var newCard = $("<div>").addClass("card");
         var newFrontClass = newCardArray.splice(Math.floor(Math.random()*newCardArray.length-1), 1)
         var newFront = $("<div>").addClass("cardfront").addClass(newFrontClass);
@@ -154,9 +153,4 @@ function createNewCards(newCardArray){
       targetRow.prepend(newCard);
     }
   }
-}
-
-function testMatchAll(){
-  $(".card").addClass("flipped").addClass("matched").removeClass("card");
-
 }
