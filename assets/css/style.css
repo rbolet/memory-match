@@ -41,7 +41,6 @@ header{
 }
 
 .sidenav{
-  /* background-color: orange; */
   border: 1px solid black;
   width: 10%;
   border-radius: 50px;
@@ -84,11 +83,7 @@ header{
 }
 
 .row{
-  /* background-color: green; */
   position: relative;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* border: 1px black solid; */
   height: 30%;
   margin: 5px;
 }
