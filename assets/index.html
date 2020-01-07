@@ -10,27 +10,30 @@
     integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
   <script src="./js/script.js"></script>
 </head>
-
 <body>
   <div class="main">
     <header>Web Tech Match Game</header>
-    <nav class="sidenav">
-      <div class="navhead">Stats</div>
-      <div class="buttons">
-        <div class="stats">Games Played</div>
-        <div class="stats" id="games-played">Games Played #</div>
-        <div class="stats">Attempts</div>
-        <div class="stats" id="attempts">Attempts #</div>
-        <div class="stats">Accuracy</div>
-        <div class="stats" id="accuracy">Accuracy #</div>
-        <div class="stats" id="newgame">New Game?</div>
+    <div class="game-body">
+      <nav class="sidenav">
+        <div class="navhead">Stats</div>
+        <div class="buttons">
+          <div class="stats">Games Played</div>
+          <div class="stats" id="games-played">Games Played #</div>
+          <div class="stats">Attempts</div>
+          <div class="stats" id="attempts">Attempts #</div>
+          <div class="stats">Accuracy</div>
+          <div class="stats" id="accuracy">Accuracy #</div>
+        </div>
+      </nav>
+      <div class="gamearea">
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="endmodal">
+          <p>You Win!</p>
+          <div id="newgame">New Game?</div>
+        </div>
       </div>
-    </nav>
-    <div class="gamearea">
-      <div class="row"></div>
-      <div class="row"></div>
-      <div class="row"></div>
-      <div class="endmodal">You win!</div>
     </div>
   </div>
 </body>
