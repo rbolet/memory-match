@@ -133,9 +133,9 @@ function createFrontArray(){
 }
 
 function createNewCards(newCardArray){
-
+  var numberofCards = newCardArray.length
   $(".row").empty(".card, .cardfront, .cardback");
-  var cardsPerRow = Math.round(newCardArray.length /3);
+  var cardsPerRow = Math.round(numberofCards /3);
 
   for(var iRows = 1; iRows < 4; ++iRows){
       var queryString = ".row:nth-child("+iRows+")";
@@ -154,8 +154,9 @@ function createNewCards(newCardArray){
       newCard.append(newBack);
       targetRow.prepend(newCard);
 
+      var firstCardPosition = ($(".row").width() / 2) - ($('.card').width() * (numberofCards / 5));
       var dynamicCardPosition =
-        ($(".row").width() * .06)               
+        firstCardPosition
           + ($(".card").width() * (iCards) + 1)
           + (15 * iCards + 1);  // + width of cards
 

@@ -5,19 +5,21 @@ body {
   overflow: hidden;
 }
 
-header, .sidenav {
+header{
   background-color: rgba(255, 255, 255, .6);
 }
 
 header{
   border: 1px solid black;
-  font-size: 3.5rem;
   text-align: center;
-  padding: 5px;
-  height: 12%;
+  padding: .25rem;
   border-radius: 50px;
+  height: 20%;
 }
 
+header h1{
+  margin: 0;
+}
 .main{
   padding: .25rem;
   background-image: url("../images/lfz-background.jpg");
@@ -27,54 +29,34 @@ header{
   margin: 0;
 }
 
-.sidenav, .gamearea{
-
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.game-body{
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
 .gamearea{
   display: inline-flex;
-  justify-content: center;
-  width : 80%;
-  height: 80%;
+  flex-direction: column;
+  justify-content: flex-start;
+  width : 100%;
+  height: 78%;
   padding: .5rem;
 }
 
 .sidenav{
-  border: 1px solid black;
-  height: 70%;
-  width: 10%;
-  border-radius: 50px;
-  margin-top: 2rem;
-
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .buttons{
   width: 100%;
-  height: 75%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
 
-}
-
-.navhead{
-  text-align: center;
 }
 
 .stats{
   border: 1px solid black;
-  width: 90%;
-  height: 10%;
-  margin: 5px;
+  padding: .25rem;
+  margin: .25rem;
   border-radius: 50px;
   text-align: center;
   display: flex;
@@ -82,20 +64,18 @@ header{
   align-items: center;
 }
 
-#newgame {
-  background-color:black;
-  color: aqua;
-   display: flex;
-   justify-content: center;
-  align-items: center;
+.stats span{
+  margin: 1rem;
 }
 
+
 .row{
+  padding:.5rem;
   position: relative;
   display: flex;
   justify-content: center;
-  height: 30%;
-  margin: 5px;
+  height: 10vw;
+  margin: .3rem;
 }
 
 .card {
@@ -106,14 +86,12 @@ header{
   background-color: transparent;
   display: inline-block;
   position: absolute;
-
-  height: 90%;
-  width: 9%;
-  margin: 15px;
+  height: 91%;
+  width: 8%;
+  margin: 0;
   perspective: 1000px;
   text-align: center;
   transition: all .5s;
-
   transform-style: preserve-3d;
 }
 
@@ -187,7 +165,9 @@ header{
 .endmodal {
   background-color:black;
   color: aqua;
+  padding: 1rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -197,6 +177,23 @@ header{
   height: 33%;
   width: 33%;
   border-radius: 50px;
-  font-size: 8vh;
   margin: auto;
+}
+
+
+#newgame {
+  background-color:aqua;
+  color: black;
+  text-align: center;
+  vertical-align: middle;
+  width: 25%;
+  height: 25%;
+  margin: auto;
+  cursor: pointer;
+}
+
+#newgame:hover{
+  background-color: black;
+  color: aqua;
+  border: 1px solid aqua;
 }
