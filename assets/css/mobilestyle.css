@@ -1,0 +1,212 @@
+body {
+  margin: 0;
+  user-select: none;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+header{
+  background-color: rgba(255, 255, 255, .6);
+}
+
+header{
+  border: 1px solid black;
+  text-align: center;
+  padding: .25rem;
+  border-radius: 20px;
+  height: 20%;
+
+}
+
+header h1{
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 400px){
+  header h1{
+    font-size: 1.2rem;
+  }
+
+  .buttons, .sidenav{
+    flex-direction: column;
+  }
+
+  .stats{
+    height: auto;
+  }
+}
+.main{
+  padding: .25rem;
+  background-image: url("../images/lfz-background.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 99vh;
+  margin: 0;
+}
+
+.gamearea{
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width : 100%;
+  height: 78%;
+  padding: .5rem;
+}
+
+.sidenav{
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.buttons{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.stats{
+  margin: .25rem;
+  border-radius: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stats span{
+  margin: 0 1rem;
+}
+
+
+.row{
+  padding:.5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 20vh;
+  margin: .3rem;
+}
+
+.card {
+  cursor: grab;
+}
+
+.card , .matched {
+  background-color: transparent;
+  display: inline-block;
+  position: absolute;
+  height: 91%;
+  width: 10%;
+  margin: 0;
+  perspective: 1000px;
+  text-align: center;
+  transition: all .5s;
+  transform-style: preserve-3d;
+}
+
+.cardback,
+.html-logo, .css-logo, .docker-logo,
+.git-logo, .js-logo, .mysql-logo,
+.node-logo, .php-logo, .react-logo
+{
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.cardback{
+   background-image: url("../images/lfz-card.jpg");
+   transform: none;
+}
+
+.html-logo{
+  background-image: url("../images/html-logo.png");
+
+}
+
+.css-logo{
+  background-image: url("../images/css-logo.png");
+
+}
+
+.docker-logo{
+  background-image: url("../images/docker-logo.jpg");
+}
+
+.git-logo{
+  background-image: url("../images/gitHub-logo.png");
+
+}
+
+.js-logo{
+  background-image: url("../images/js-logo.png");
+}
+
+.mysql-logo{
+  background-image: url("../images/mysql-logo.jpg");
+}
+
+.node-logo{
+  background-image: url("../images/node-logo.png");
+}
+
+.php-logo{
+  background-image: url("../images/php-logo.jpeg");
+}
+
+.react-logo{
+  background-image: url("../images/react-logo.png");
+}
+
+
+.flipped{
+  transform: rotateY(180deg);
+}
+
+.hidden{
+  visibility:hidden;
+}
+
+.endmodal {
+  background-color:black;
+  color: aqua;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  height: 33%;
+  width: 33%;
+  border-radius: 50px;
+  margin: auto;
+}
+
+
+#newgame {
+  background-color:aqua;
+  color: black;
+  text-align: center;
+  vertical-align: middle;
+  width: 25%;
+  height: 25%;
+  margin: auto;
+  cursor: pointer;
+}
+
+#newgame:hover{
+  background-color: black;
+  color: aqua;
+  border: 1px solid aqua;
+}
