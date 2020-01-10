@@ -154,11 +154,11 @@ function createNewCards(newCardArray){
       newCard.append(newBack);
       targetRow.prepend(newCard);
 
-      var firstCardPosition = ($(".row").width() / 2) - ($('.card').width() * (numberofCards / 5));
-      var dynamicCardPosition =
-        firstCardPosition
-          + ($(".card").width() * (iCards) + 1)
-          + (15 * iCards + 1);  // + width of cards
+      // var firstCardPosition = 5;
+      var dynamicCardPosition = 1;
+        // firstCardPosition
+        //   + (iCards) + 1;
+        //   //  (15 * iCards + 1);  // + width of cards
 
       var dynamicDelay = 200 * iCards + 1;
 
