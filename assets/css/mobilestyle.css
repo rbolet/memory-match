@@ -3,6 +3,8 @@ body {
   user-select: none;
   box-sizing: border-box;
   overflow: hidden;
+  font-family: 'Press Start 2P', Arial, Helvetica, sans-serif;
+  font-size: .6rem;
 }
 
 header{
@@ -10,6 +12,7 @@ header{
 }
 
 header{
+  backdrop-filter: blur(4px);
   border: 1px solid black;
   text-align: center;
   padding: .25rem;
@@ -34,6 +37,7 @@ header h1{
 }
 
 .gamearea{
+  backdrop-filter: blur(4px);
   display: inline-flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -111,7 +115,13 @@ header h1{
 }
 
 .cardback{
-   background-image: url("../images/lfz-card.jpg");
+   background-image: url("../images/card-back-static.jpg");
+   transform: none;
+   background-size: cover;
+}
+
+.cardback:hover{
+   background-image: url("../images/card-back.gif");
    transform: none;
 }
 
