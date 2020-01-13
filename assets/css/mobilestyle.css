@@ -193,6 +193,10 @@ header h1{
 
 
 #newgame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color:limegreen;
   color: black;
   text-align: center;
@@ -201,6 +205,10 @@ header h1{
   height: 30%;
   margin: auto;
   cursor: pointer;
+}
+
+#newgame p{
+  margin: 0;
 }
 
 #newgame:hover{
