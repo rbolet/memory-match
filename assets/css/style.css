@@ -179,8 +179,7 @@ main *{
 }
 
 .endmodal {
-  background-color:black;
-  color: aqua;
+  background-color: rgb(0,0,0, .6);
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -198,12 +197,12 @@ main *{
 
 
 #newgame {
-  background-color:aqua;
+  background-color:limegreen;
   font-size: .65rem;
   color: black;
   text-align: center;
   vertical-align: middle;
-  width: 25%;
+  width: 40%;
   height: 25%;
   margin: auto;
   cursor: pointer;
@@ -211,8 +210,8 @@ main *{
 
 #newgame:hover{
   background-color: black;
-  color: aqua;
-  border: 1px solid aqua;
+  color: limegreen;
+  border: 1px solid limegreen;
 }
 
 
