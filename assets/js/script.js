@@ -73,7 +73,6 @@ function checkforWin(){
   if (matches === maxMatches){
     $(".endmodal").removeClass("hidden");
     $("#newgame").removeClass("hidden");
-    $(".main").on("click", function (){$(".endmodal").addClass("hidden");})
     return true;
 
   } else {
@@ -154,12 +153,7 @@ function createNewCards(newCardArray){
       newCard.append(newBack);
       targetRow.prepend(newCard);
 
-      // var firstCardPosition = 5;
       var dynamicCardPosition = 1;
-        // firstCardPosition
-        //   + (iCards) + 1;
-        //   //  (15 * iCards + 1);  // + width of cards
-
       var dynamicDelay = 200 * iCards + 1;
 
       setTimeout(animateCards, dynamicDelay, newCard, dynamicCardPosition);
