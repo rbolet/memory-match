@@ -196,15 +196,19 @@ main *{
 }
 
 
-#newgame {
+#newgame{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color:limegreen;
-  font-size: .65rem;
+  font-size: .8rem;
   color: black;
   text-align: center;
   vertical-align: middle;
   width: 40%;
   height: 25%;
-  margin: auto;
+  margin: 0;
   cursor: pointer;
 }
 
