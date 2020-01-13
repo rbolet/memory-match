@@ -3,12 +3,13 @@ body {
   user-select: none;
   box-sizing: border-box;
   overflow: hidden;
-  font-family: 'Press Start 2P', Arial, Helvetica, sans-serif;
-  font-size: .6rem;
+  font-family: 'Source Code Pro', Arial, Helvetica, sans-serif;
+  font-size: .8rem;
+  color: limegreen;
 }
 
 header{
-  background-color: rgba(255, 255, 255, .6);
+  background-color: rgb(0,0,0, .6);
 }
 
 header{
@@ -29,7 +30,7 @@ header h1{
 
 .main{
   padding: .25rem;
-  background-image: url("../images/lfz-background.jpg");
+  background-image: url("../images/white-code-bg.gif");
   background-size: cover;
   background-position: center;
   height: 99vh;
