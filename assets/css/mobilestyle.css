@@ -191,6 +191,9 @@ header h1{
   margin: auto;
 }
 
+.endmodal h1{
+  text-align: center;
+}
 
 #newgame {
   display: flex;
@@ -205,6 +208,7 @@ header h1{
   height: 30%;
   margin: auto;
   cursor: pointer;
+  border: 1px solid transparent;
 }
 
 #newgame p{
@@ -215,6 +219,10 @@ header h1{
   background-color: black;
   color: limegreen;
   border: 1px solid limegreen;
+}
+
+.matched{
+  cursor: not-allowed;
 }
 
 @media screen and (max-width: 400px){
