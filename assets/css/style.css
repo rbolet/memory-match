@@ -218,6 +218,9 @@ main *{
   border: 1px solid limegreen;
 }
 
+.matched{
+  cursor: not-allowed;
+}
 
 @media screen and (min-height: 900px){
   .row {
@@ -227,19 +230,4 @@ main *{
   .card, .matched {
     width: 15%;
   }
-
-  /* .cardback,
-  .html-logo, .css-logo, .docker-logo,
-  .git-logo, .js-logo, .mysql-logo,
-  .node-logo, .php-logo, .react-logo {
-  position: absolute;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: black;
-  height: 100%;
-  width: 100%;
-  backface-visibility: hidden;
-  transform: rotateY(180deg);
-  } */
 }

@@ -217,6 +217,10 @@ header h1{
   border: 1px solid limegreen;
 }
 
+.matched{
+  cursor: not-allowed;
+}
+
 @media screen and (max-width: 400px){
   header h1{
     font-size: 1.2rem;
