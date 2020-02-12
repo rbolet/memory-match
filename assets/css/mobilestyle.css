@@ -205,6 +205,7 @@ header h1{
   height: 30%;
   margin: auto;
   cursor: pointer;
+  border: 1px solid transparent;
 }
 
 #newgame p{
