@@ -191,6 +191,9 @@ header h1{
   margin: auto;
 }
 
+.endmodal h1{
+  text-align: center;
+}
 
 #newgame {
   display: flex;
